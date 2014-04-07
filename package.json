@@ -1,0 +1,29 @@
+{
+  "name": "heartrate",
+  "version": "0.0.1",
+  "description": "A Bluethooth Low Energy heart rate stream.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/mikaelbr/node-heartrate.git"
+  },
+  "homepage": "http://github.com/mikaelbr/node-heartrate",
+  "keywords": [
+    "BLE",
+    "bluetooth",
+    "bluetooth low energy",
+    "heartrate",
+    "heart rate",
+    "stream",
+    "streams"
+  ],
+  "author": "Mikael Brevik <mikaelbre@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node.extend": "^1.0.10",
+    "noble": "^0.3.0"
+  }
+}
