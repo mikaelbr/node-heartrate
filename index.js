@@ -28,4 +28,11 @@ Ble.prototype._read = function(size) {
   this._source.start();
 };
 
+Ble.prototype.end = function(size) {
+  if (!this._source) {
+    return;
+  }
+  this._source.disconnect();
+};
+
 module.exports = Ble;
