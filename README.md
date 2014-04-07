@@ -46,5 +46,5 @@ Defaults:
 [npm-url]: https://npmjs.org/package/heartrate
 [npm-image]: https://badge.fury.io/js/heartrate.png
 
-[depstat-url]: https://david-dm.org/mikaelbr/heartrate
-[depstat-image]: https://david-dm.org/mikaelbr/heartrate.png
+[depstat-url]: https://david-dm.org/mikaelbr/node-heartrate
+[depstat-image]: https://david-dm.org/mikaelbr/node-heartrate.png
