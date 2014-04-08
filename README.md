@@ -52,7 +52,6 @@ var stream = new BleHR('foo12345bar1234fo12345bar1234123');
 stream.getBodyLocation().on('bodyLocation', function (error, location) {
   console.log("Location:", location); // Chest
 });
-
 ```
 
 ### `new BleHR(UUID).getBatteryLevel([callback(error, level)])`
@@ -68,7 +67,6 @@ var stream = new BleHR('foo12345bar1234fo12345bar1234123');
 stream.getBatteryLevel(function (err, level) {
   console.log("BatteryLevel:", level); // BatteryLevel: 47
 });
-
 ```
 
 ### `BleHR.list()` (static)
