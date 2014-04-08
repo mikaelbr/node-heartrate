@@ -48,5 +48,19 @@ Ble.prototype.getBodyLocation = function (callback) {
   return this;
 };
 
+Ble.prototype.getBatteryLevel = function (callback) {
+  var self = this;
+  this._source.getBatteryLevel(function (error, level) {
+    if (error) {
+      self.emit('error', error);
+      callback(error);
+      return;
+    }
+    self.emit('batteryLevel', level);
+    callback(null, level);
+  });
+  return this;
+};
+
 module.exports = Ble;
 module.exports.list = list;

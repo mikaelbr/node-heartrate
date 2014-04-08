@@ -55,6 +55,22 @@ stream.getBodyLocation().on('bodyLocation', function (error, location) {
 
 ```
 
+### `new BleHR(UUID).getBatteryLevel([callback(error, level)])`
+Parameter: `Function` callback with the current battery level in percentage
+Returns: `BleHR` instance (it self)
+
+Get battery level of device in percentage. Interval `0` - `100`.
+Either get data by using the callback or listening to the `batteryLevel` event.
+
+Example:
+```javascript
+var stream = new BleHR('foo12345bar1234fo12345bar1234123');
+stream.getBatteryLevel(function (err, level) {
+  console.log("BatteryLevel:", level);
+});
+
+```
+
 ### `BleHR.list()` (static)
 Returns: `EventEmitter` instance
 
