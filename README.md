@@ -66,7 +66,7 @@ Example:
 ```javascript
 var stream = new BleHR('foo12345bar1234fo12345bar1234123');
 stream.getBatteryLevel(function (err, level) {
-  console.log("BatteryLevel:", level);
+  console.log("BatteryLevel:", level); // BatteryLevel: 47
 });
 
 ```
