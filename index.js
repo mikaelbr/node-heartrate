@@ -14,7 +14,6 @@ function Ble (options) {
   // Every time there's data, we push it into the internal buffer.
   this._source.on('data', function (chunk) {
     if (!self.push(new Buffer(chunk + ""))) {
-      console.log("HERRA??");
       self._source.pause();
     }
   });
