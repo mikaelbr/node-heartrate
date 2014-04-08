@@ -34,5 +34,19 @@ Ble.prototype.end = function(size) {
   this._source.disconnect();
 };
 
+Ble.prototype.getBodyLocation = function (callback) {
+  var self = this;
+  this._source.getBodyLocation(function (error, location) {
+    if (error) {
+      self.emit('error', error);
+      callback(error);
+      return;
+    }
+    self.emit('bodyLocation', location);
+    callback(null, location);
+  });
+  return this;
+};
+
 module.exports = Ble;
 module.exports.list = list;

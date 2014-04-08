@@ -39,7 +39,23 @@ Defaults:
 ```
 *`uuid` is required*
 
-### `BleHR.list()`
+### `new BleHR(UUID).getBodyLocation([callback(error, location)])`
+Parameter: `Function` callback with the location in string format
+Returns: `BleHR` instance (it self)
+
+Get string representation of body sensor location. E.g. `Chest`, `Ear Lobe`.
+Either get data by using the callback or listening to the `bodyLocation` event.
+
+Example:
+```javascript
+var stream = new BleHR('foo12345bar1234fo12345bar1234123');
+stream.getBodyLocation().on('bodyLocation', function (error, location) {
+  console.log("Location:", location); // Chest
+});
+
+```
+
+### `BleHR.list()` (static)
 Returns: `EventEmitter` instance
 
 Emits all discovered devices on `data` event.
@@ -51,7 +67,7 @@ BleHR.list().on('data', function (device) {
 });
 ```
 
-### `BleHR.list.print()`
+### `BleHR.list.print()` (static)
 
 Sugar for printing all devices found.
 
