@@ -1,6 +1,6 @@
 {
   "name": "heartrate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Bluethooth Low Energy heart rate stream.",
   "main": "index.js",
   "scripts": {
