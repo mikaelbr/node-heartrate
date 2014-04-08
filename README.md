@@ -39,6 +39,31 @@ Defaults:
 ```
 *`uuid` is required*
 
+### `BleHR.list()`
+Returns: `EventEmitter` instance
+
+Emits all discovered devices on `data` event.
+
+Example:
+```javascript
+BleHR.list().on('data', function (device) {
+  console.log(device.uuid);
+});
+```
+
+### `BleHR.list.print()`
+
+Sugar for printing all devices found.
+
+Example:
+```javascript
+BleHR.list.print();
+// UUID: foo12345bar1234fo12345bar1234123
+//   Local Name        = Wahoo HRM v2.1
+//   Service Data      =
+//   Service UUIDs     = 180d
+```
+
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
