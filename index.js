@@ -1,7 +1,7 @@
 var util = require('util');
 var Readable = require('stream').Readable;
 var Device = require('./lib/device');
-
+var list = require('./lib/listDevices');
 
 util.inherits(Ble, Readable);
 
@@ -35,3 +35,4 @@ Ble.prototype.end = function(size) {
 };
 
 module.exports = Ble;
+module.exports.list = list;
