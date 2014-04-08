@@ -11,11 +11,9 @@ npm install --save heartrate
 ```
 
 ```javascript
-
 var BleHR = require('heartrate');
 var stream = new BleHR('foo12345bar1234fo12345bar1234123');
 stream.pipe(process.stdout);
-
 ```
 
 ## API
